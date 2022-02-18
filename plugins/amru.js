@@ -9,11 +9,11 @@ var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 
-let whb = Config.WORKTYPE == 'public' ? false : true
+let whb = Config.WORKTYPE == 'private' ? false : true
 
 WhatsAlexa.addCommand({pattern: 'list', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message! Amalser.
-    var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
+    var plk_say = new Date().toLocaleString('Merhaba usta', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
