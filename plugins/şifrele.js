@@ -1,16 +1,15 @@
-const Ktb = require('../events');
+const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 
 // ENCRYPTION PLUGIN FOR FUN, IF U NEED COPY PASTE THIS 
 // NO NEED CREDIT
-const b64 = "Text encryption using base64."
-const usage = ".b64en <text>"
+const b64 = "base64 ile metin şifreler."
+const usage = ".şifrele <text>"
+const encypt = "```şifrelemek isteğiniz metni girin!```"
 
-const encypt = "```Enter the text which you need to encrypt!```"
-
-Ktb.addCommand({ pattern: 'encrpt ?(.*)', fromMe: false, desc: b64, usage: usage }, async (message, match) => {
+Asena.addCommand({ pattern: 'şifrele ?(.*)', fromMe: false, desc: b64, usage: usage }, async (message, match) => {
 
         const Wtb = match[1]
         
