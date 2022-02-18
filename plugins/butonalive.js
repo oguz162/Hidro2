@@ -15,9 +15,9 @@ var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 
 
-let whb = Config.WORKTYPE == 'public' ? false : true
+let whb = Config.WORKTYPE == 'private' ? false : true
 
-LizaMwol.addCommand({pattern: 'alive', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
+LizaMwol.addCommand({pattern: 'alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message!credit Amal
     const buttons = [
         {buttonId: 'id1', buttonText: {displayText: Config.ALIVE_BUTTON }, type: 1},
