@@ -1,7 +1,7 @@
 const asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const GM = "it sends good morning message"
-const GN = "it sends good night message"
+const GM = "günaydın mesajı gönderir"
+const GN = "iyi geceler mesajı gönderir"
 const Config = require('../config');
 
 
