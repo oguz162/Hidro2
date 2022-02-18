@@ -1,4 +1,4 @@
-const WhatsAlexa = require('../events');
+const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -9,7 +9,7 @@ var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 
-WhatsAlexa.addCommand({pattern: 'list', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'list', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message! Amalser.
     var plk_say = new Date().toLocaleString('Merhaba usta', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
