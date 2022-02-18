@@ -9,9 +9,7 @@ var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
 
-let whb = Config.WORKTYPE == 'private' ? false : true
-
-WhatsAlexa.addCommand({pattern: 'list', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'list', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message! Amalser.
     var plk_say = new Date().toLocaleString('Merhaba usta', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
