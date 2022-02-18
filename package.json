@@ -1,14 +1,14 @@
 {
-  "name": "JulieMwol",
+  "name": "Zlose",
   "version": "7.3.6",
-  "description": "This is a Modified Version of WhatsAsena, Made By phaticusthiccy with Baileys.",
-  "main": "./Julie-Mwol/bot.js",
+  "description": "silivri soğuktur.",
+  "main": "./asena2/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farhan-dqz/Julie-Mwol.git"
+    "url": "git+https://github.com/oguz162/asena2.git"
   },
   "keywords": [
     "whatsapp",
@@ -17,13 +17,13 @@
     "asena",
     "WhatsAsena"
   ],
-  "author": "farhan-dqz",
-  "developer": "@TOXIC-DEVIL / @farhan-dqz",
+  "author": "oguz162",
+  "developer": "@Zlose / @unique_hunter",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/farhan-dqz/Julie-Mwol/issues"
+    "url": "https://github.com/oguz162/asena/issues"
   },
-  "homepage": "https://github.com/farhan-dqz/Julie-Mwol#readme",
+  "homepage": "https://github.com/oguz162/asenal#readme",
   "dependencies": {
     "@adiwajshing/baileys": "3.5.3",
     "@lh2020/speedtest-net": "^2.1.1",
