@@ -1,3 +1,4 @@
+/*
 const Ktb = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
@@ -15,3 +16,4 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'END:VCARD'
 await message.client.sendMessage(message.jid,{displayname: "AMRU-SER [OWNER]", vcard: vcard}, MessageType.contact)
 }))
+*/
