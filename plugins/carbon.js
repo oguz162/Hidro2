@@ -1,13 +1,8 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
-*/
-
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
-const dd = "Made by JulieMwol"
+const dd = "Made By Zlose"
 
 const Language = require('../language');
 const Lang = Language.getString('weather');
