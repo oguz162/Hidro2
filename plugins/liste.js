@@ -14,7 +14,7 @@ Asena.addCommand({pattern: 'liste', fromMe: true, dontAddCommandList: true}, (as
     var plk_say = new Date().toLocaleString('TR', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
-var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
+var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
 	const buttons = [
 
         {buttonId: 'id1', buttonText: {displayText: '☃️düzenlenecek❄️'}, type: 1},
@@ -24,7 +24,7 @@ var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '
       ]
       
       const buttonMessage = {
-          contentText: ' selam dostum---🧚\n\n```Bᴏᴛ Nᴀᴍᴇ::``` *'+Config.BOT_NAME+'*\n\n💙 ᴛɪᴍᴇ   : ```' + plk_say + '```\n🥶 ᴅᴀᴛᴇ : ```' + plk_here + '```\n\n☃️ menü için aşağıdaki butonlara tıklayınız :)\n', 
+          contentText: ' selam dostum---🧚\n\n```Bᴏᴛ Nᴀᴍᴇ::``` *'+Config.BOT+'*\n\n💙 ᴛɪᴍᴇ   : ```' + plk_say + '```\n🥶 ᴅᴀᴛᴇ : ```' + plk_here + '```\n\n☃️ menü için aşağıdaki butonlara tıklayınız :)\n', 
           footerText: '✮ Zlose 💕',
           buttons: buttons,
           headerType: 1
