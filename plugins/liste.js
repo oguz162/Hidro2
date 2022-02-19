@@ -24,7 +24,7 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
       ]
       
       const buttonMessage = {
-          contentText: ' selam dostum---🧚\n\n```Bᴏᴛ Nᴀᴍᴇ:``` *'+Config.BOT+'*\n\n💙 ᴛɪᴍᴇ   : ```' + plk_say + '```\n🥶 ᴅᴀᴛᴇ : ```' + plk_here + '```\n\n☃️ menü için aşağıdaki butonlara tıklayınız :)\n', 
+          contentText: ' selam dostum---🧚\n\n```Bᴏᴛ Nᴀᴍᴇ:``` *'+Config.BOT+'*\n\n⏱ SAAT   : ```' + plk_say + '```\n📅 TARİH : ```' + plk_here + '```\n\n☃️ menü için aşağıdaki butonlara tıklayınız :)\n', 
           footerText: '✮ Zlose 💕',
           buttons: buttons,
           headerType: 1
