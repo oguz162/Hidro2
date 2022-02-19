@@ -6,7 +6,7 @@ const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'anime', fromMe: true, desc: 'random anime image'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: true, desc: 'random anime fotoları gönderir'}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -94,7 +94,7 @@ if (Config.WORKTYPE == 'private') {
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Mᴀᴅᴇ Bʏ Aᴍʀᴜ Sᴇʀ'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made By Zlose'})
 
     }));
 }
