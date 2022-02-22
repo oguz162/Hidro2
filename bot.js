@@ -108,17 +108,17 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         console.log(
             chalk.blueBright.italic('Confirming password...')
         );
-        if (config.AFPLK == 'amruser' || config.AFPLK == 'amrus' || config.AFPLK == 'vava' || config.AFPLK == 'Amruser') {
+        if (config.AFPLK == 'morz' || config.AFPLK == 'masal' || config.AFPLK == 'zeyno' || config.AFPLK == 'rüzgar') {
         //thanks to afnanplk
         console.log(
             chalk.green.bold('thanks for watching -key cofirmed-')
         );
          }
-         else if (config.AFPLK !== 'amruser' || config.AFPLK !== 'amrus' || config.AFPLK !== 'vava' || config.AFPLK !== 'Amruser') {
+         else if (config.AFPLK !== 'morz' || config.AFPLK !== 'masal' || config.AFPLK !== 'zeyno' || config.AFPLK !== 'rüzgar') {
          console.log(
-            chalk.red.bold('make sure you have typed the correct password'));
-         throw new Error("Password Error ⚠⚠ ");         
-         return; //created by afnanplk
+            chalk.red.bold('Şifreyi doğru yazdığınızdan emin olun'));
+         throw new Error("Şifre hatalı ⚠⚠ ");         
+         return; //created by Zlose
          }
 
         console.log(
