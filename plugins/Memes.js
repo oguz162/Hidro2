@@ -1,11 +1,3 @@
-/* Copyright (C) 2020 Yusuf Usta.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-WhatsMyPnky - Yusuf Usta
-Coded by @KursadHD
-re edited by afnanplk
-*/
-
 const MyPnky = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const memeMaker = require('meme-maker')
