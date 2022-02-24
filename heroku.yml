@@ -1,5 +1,5 @@
 build:
   docker:
-      worker: /AMRU/Dockerfile
+      worker: /spektral/Dockerfile
 run:
    worker: npm start
