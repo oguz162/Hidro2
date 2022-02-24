@@ -3,13 +3,12 @@ const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 
-// ENCRYPTION PLUGIN FOR FUN, IF U NEED COPY PASTE THIS 
-// NO NEED CREDIT
+// sadece eğlence için yapılmıştır.
 const b64 = "base64 ile metin şifreler."
 const usage = ".sifrele <text>"
 const encypt = "```şifrelemek isteğiniz metni girin!```"
 
-Asena.addCommand({ pattern: 'sifrele ?(.*)', fromMe: true, desc: b64, usage: usage }, async (message, match) => {
+Asena.addCommand({ pattern: 'şifrele ?(.*)', fromMe: true, desc: b64, usage: usage }, async (message, match) => {
 
         const Wtb = match[1]
         
