@@ -6,7 +6,7 @@ const chalk = require('chalk');
 const config = require('./config');
 const simpleGit = require('simple-git');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./AMRU/');
+const {Message, StringSession, Image, Video} = require('./spektral/');
 const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
 const git = simpleGit();
@@ -83,7 +83,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login information updated!')
+            chalk.blueBright.italic('✅ Giriş bilgileri güncellendi!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -97,21 +97,21 @@ async function whatsAsena () {
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
+${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
     });
     
 //Bot şifre sistemi
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('✅ Giriş başarılı!')
         );
         console.log(
-            chalk.blueBright.italic('Confirming password...')
+            chalk.blueBright.italic('Şifre onaylanıyor...')
         );
         if (config.AFPLK == 'morz' || config.AFPLK == 'masal' || config.AFPLK == 'zeyno' || config.AFPLK == 'rüzgar') {
         //
         console.log(
-            chalk.green.bold('thanks for watching -key cofirmed-')
+            chalk.green.bold('Şifre doğru bot başlatılıyor...)
         );
          }
          else if (config.AFPLK !== 'morz' || config.AFPLK !== 'masal' || config.AFPLK !== 'zeyno' || config.AFPLK !== 'rüzgar') {
@@ -123,7 +123,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 	    //Son bot şifre sistemi
 
         console.log(
-            chalk.blueBright.italic('⬇️ Installing external plugins...')
+            chalk.blueBright.italic('⬇️ Harici eklentiler yükleniyor...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -139,7 +139,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️Installing plugins...')
+            chalk.blueBright.italic('⬇️ Eklentiler yüklendi...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -149,7 +149,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.green.bold('Amru Ser ' + config.WORKTYPE + ' Now 💙'));
+            chalk.green.bold('Zlose ' + config.WORKTYPE + ' Spektral 💙'));
           // thanks to afnanplk
 	    if (config.LANG == 'EN' || config.LANG == 'ML') {
                 await git.fetch();
@@ -206,7 +206,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
             
             return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
         } 
-		while (getGMTh == 23 && getGMTm == 30) {
+		while (getGMTh == 23 && getGMTm == 01) {
             const {data} = await axios(ansk)
             const { sken, skml } = data
                       
