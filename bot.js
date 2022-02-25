@@ -111,7 +111,7 @@ ${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
         if (config.AFPLK == 'morz' || config.AFPLK == 'masal' || config.AFPLK == 'zeyno' || config.AFPLK == 'rüzgar') {
         //
         console.log(
-            chalk.green.bold('Şifre doğru bot başlatılıyor...)
+            chalk.green.bold('Şifre doğru bot başlatılıyor...')
         );
          }
          else if (config.AFPLK !== 'morz' || config.AFPLK !== 'masal' || config.AFPLK !== 'zeyno' || config.AFPLK !== 'rüzgar') {
