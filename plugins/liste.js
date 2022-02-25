@@ -1,20 +1,3 @@
-
-oguz162
-/
-asena2
-Private
-Code
-Issues
-Pull requests
-Projects
-Security
-Insights
-Settings
-asena2/plugins/liste.js
-@oguz162
-oguz162 Update liste.js
- 1 contributor
-36 lines (29 sloc)  5.31 KB
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
