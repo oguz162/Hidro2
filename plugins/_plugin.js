@@ -1,11 +1,3 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
-*/
-
 const Asena = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
@@ -33,7 +25,7 @@ var LANG = {
             limit: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
             imside: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
 };
-Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'install?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
 
     if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
     try {
@@ -57,9 +49,9 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             plugin_name = "__" + Math.random().toString(36).substring(8);
         }
 
-        fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
+        fs.writeFileSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js', response.body);
         try {
-            require('./' + plugin_name);
+            require('/root/WhatsAsenaDuplicated/plugins/' + plugin_name);
         } catch (e) {
             fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
             return await message.client.sendMessage(message.jid,Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text);
@@ -107,7 +99,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             else if (!match[1].includes('phaticusthiccy') && DEG.level < 100) {
                 await Db.installPlugin(url, plugin_name)
                 await new Promise(r => setTimeout(r, 400))
-                await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text)
+                await message.client.sendMessage(message.jid, '*Resmi Değil!*', MessageType.text)
                 await new Promise(r => setTimeout(r, 400))
                 await message.client.sendMessage(message.jid, LANG.unaffinfo + DEG.level + '_', MessageType.text)
             }
@@ -120,7 +112,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
     }
 }));
 
-Asena.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -136,24 +128,22 @@ Asena.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, de
     }
 }));
 
-Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
-    if (!match[1].startsWith('__')) match[1] = '__' + match[1];
-    try {
-        var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
-        if (plugin.length < 1) {
-            return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
-        } else {
-            await plugin[0].destroy();
-            delete require.cache[require.resolve('./' + match[1] + '.js')]
-            fs.unlinkSync('./plugins/' + match[1] + '.js');
-            await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);        
-            await new Promise(r => setTimeout(r, 1000));  
-            await message.sendMessage(NLang.AFTER_UPDATE);
-            console.log(baseURI);
-            await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-                await message.sendMessage(error.message);
-            });
-        }
-    } catch (errormsg) { return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text) }
+    if (!match[1].startsWith('__')) name = '__' + match[1];
+    var plugin = await Db.PluginDB.findAll({ where: {name: name} });
+    if (plugin.length < 1) {
+        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
+    } else {
+        await plugin[0].destroy();
+        delete require.cache[require.resolve('/root/WhatsAsenaDuplicated/plugins/' + name + '.js')]
+        fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + name + '.js');
+        await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);        
+        await new Promise(r => setTimeout(r, 1000));  
+        await message.sendMessage(NLang.AFTER_UPDATE);
+        console.log(baseURI);
+        await heroku.delete(baseURI + '/dynos').catch(async (error) => {
+            await message.sendMessage(error.message);
+        });
+    }
 }));
