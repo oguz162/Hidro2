@@ -294,17 +294,17 @@
             "NOT_FOUND": "```Bu isimde bir şehir olduğuna sen inanıyormusun ki bide benim bulmamı istiyorsun. 😖```"
         },
         "web": {
-            "SPEEDTEST_DESC": "Measures Download and Upload speed.",
-            "SPEEDTESTING": "```Running speed test...```",
-            "SPEEDTEST_RESULT": "*Speed ​​test completed!*",
-            "UPLOAD": "Upload",
-            "DOWNLOAD": "Download",
-            "CALC": "Performs simple math operations.",
-            "SUC": "*Calculation Done ✅*\n*Result:* ",
-            "UNSUC": "*Calculation Failed ❌*\n*Error:* \n",
-            "VALİD": "*Please Use As Applicable!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
-            "PING_DESC": "Measures your ping.",
-            "URL": "Shorten the long link."
+            "SPEEDTEST_DESC": "Kullandığınız internet sunucusunun indirme ve yükleme hızını ölçer.",
+            "SPEEDTESTING": "```Hız testi yapılıyor lütfen bekleyiniz......```",
+            "SPEEDTEST_RESULT": "*Hız testi tamamlandı!*",
+            "UPLOAD": "Yükleme hızı",
+            "DOWNLOAD": "İndirme Hızı",
+            "CALC": "Basit bir matematik işlemleri gerçekleştirir (kısaca hesap makinesi).",
+            "SUC": "*Hesaplama tamamlandı ✅*\n*Sonuç:* ",
+            "UNSUC": "*Hesaplama başarısız ❌*\n*Hata:* \n",
+            "VALİD": "*Lütfen uygun şekilde kullanın!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
+            "PING_DESC": "İnternet ping'inizi ölçer.",
+            "URL": "uzun URL bağlantılarını kısaltır."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Converts video to sound.",
