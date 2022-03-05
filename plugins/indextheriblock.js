@@ -1,18 +1,13 @@
-/* COPYRIGHT © HISHAN-SOPHIA
-   RE-CODED - TERROR BOY
-*/
-const Hisham = require('../events');
+const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
 
-// Inbox Block System
-// This Plugins By Hisham Muhammed 
-const INBO1 = "_~~~••• AMALSER_V2 •••~~~_* \n\n\n *i am blocking you.* \n\n *REASON:THERI ITTATH KOND🖐🏻🖐🏻"
+const INBO1 = "_~~~••• SPEKTRAL •••~~~_* \n\n\n *Bana yazman yasak.* \n\n *o yüzden engelleniyorsun*🖐🏻🖐🏻"
  if (Config.INBO1 == 'true') {
-Hisham.addCommand({on: 'text', fromMe: false, delownsewcmd: false, onlyPm: true }, (async (message, match) => {
+Asena.addCommand({on: 'text', fromMe: false, delownsewcmd: false, onlyPm: true }, (async (message, match) => {
         let regexb1ichu = new RegExp('thayoli')
         let regexb2ichu = new RegExp('myre')
         let regexb3ichu = new RegExp('kunna')
