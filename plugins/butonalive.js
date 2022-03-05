@@ -2,7 +2,7 @@
 Re-edit Amalser + chunkindepadayali
 */
 
-const LizaMwol = require('../events');
+const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -17,7 +17,7 @@ var ddd = ggg.toString('utf-8')
 
 let whb = Config.WORKTYPE == 'private' ? false : true
 
-LizaMwol.addCommand({pattern: 'alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message!credit Amal
     const buttons = [
         {buttonId: 'id1', buttonText: {displayText: Config.ALIVE_BUTTON }, type: 1},
