@@ -6,9 +6,9 @@ const request = require('request');
 const got = require("got");
 const cn = require('../config');
 const Config = require('../config');
-const SPDF_DESC = "Converts a Site into PDF"
-const SPDF_PROC = "```Convirtiendo el sitio en PDF...```"
-const SPDF_LINK = "*Por favor, ingresa un enlace para convertirlo en PDF.*"
+const SPDF_DESC = "siteyi pdfye dönüştürür"
+const SPDF_PROC = "```site pdfye dönüştürülüyor...```"
+const SPDF_LINK = "*link ver kanka.*"
 
 if (cn.WORKTYPE == 'private') {
   
