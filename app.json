@@ -21,6 +21,16 @@
             "required": true,
             "value": "en"
         },
+        "PM_PERMİT": {
+            "description": "On / Off Pm Permit",
+            "required": false,
+            "value": "false"
+        },
+        "PM_PERMİT_TİME": {
+            "description": "PM Permit Scheduler",
+            "required": false,
+            "value": "1800"
+        },
         "BGM_FILTER": {
             "description": "If you likes bgm you can write 'true'. Otherwise false",
             "required": false,
