@@ -1,8 +1,3 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
-WhatsAsena - Yusuf Usta
-*/
-
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
@@ -25,8 +20,6 @@ module.exports = {
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
-    PMPERMİTTİME: process.env.PM_PERMİT_TİME === undefined ? '1800' : process.env.PM_PERMİT_TİME,
-    PMPERMİT: process.env.PM_PERMİT === undefined ? false : process.env.PM_PERMİT,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     WELCOME: process.env.WELCOME === undefined ? 'pp' : process.env.WELCOME,
