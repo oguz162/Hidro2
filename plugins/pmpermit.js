@@ -62,7 +62,7 @@ async function permitacton(id) {
         var updatewrite = await MongoClient.connect(config.mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true })
 
         await updatewrite.db("pmpermit").collection("data").updateOne({ number: id }, { $set: { times: 1, permit: true } })
-        fs.readFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, { encoding: 'utf8' },
+        fs.readFile(__dirname + `/root/asena2/pmaction/${id}.json`, { encoding: 'utf8' },
             async function(err, data) {
                 if (err) {
                     fs.writeFile(__dirname + `/root/asena2/pmaction/{id}.json`, JSON.stringify({
