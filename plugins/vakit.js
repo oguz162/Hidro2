@@ -22,10 +22,10 @@ const renek = "```şehir bulunamadı!```"
                     '📅 ```' + json.results.datetime[0].date.gregorian + ' | ' + json.results.location.timezone + '```\n' +
                     '🌏 ```' + json.results.location.city + ' | ' + json.results.location.country + '```\n\n' +
 		    '```Imsak   :``` *' + json.results.datetime[0].times.Imsak + '*\n' + 
-		    '```Subuh   :``` *' + json.results.datetime[0].times.sabah + '*\n' +
-		    '```Dzuhur  :``` *' + json.results.datetime[0].times.öğle + '*\n' + 
-		    '```Asar    :``` *' + json.results.datetime[0].times.aksam + '*\n' + 
-		    '```Maghrib :``` *' + json.results.datetime[0].times.yatsı + '*\n' +
+		    '```Sabah   :``` *' + json.results.datetime[0].times.Fajr + '*\n' +
+		    '```Öğlen   :``` *' + json.results.datetime[0].times.Dhuhr + '*\n' + 
+		    '```İkindi  :``` *' + json.results.datetime[0].times.Asr + '*\n' + 
+		    '```Akşam   :``` *' + json.results.datetime[0].times.Maghrib + '*\n' +
         '```Isha    :``` *' + json.results.datetime[0].times.Isha + '*\n', MessageType.text);
 	    } catch {
 		    return await message.client.sendMessage(message.jid, renek, MessageType.text);
