@@ -65,7 +65,7 @@ async function permitacton(id) {
         fs.readFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, { encoding: 'utf8' },
             async function(err, data) {
                 if (err) {
-                    fs.writeFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/{id}.json`, JSON.stringify({
+                    fs.writeFile(__dirname + `/root/asena2/pmaction/{id}.json`, JSON.stringify({
                         status: "found",
                         number: id,
                         times: 1,
@@ -77,9 +77,9 @@ async function permitacton(id) {
                         } else {}
                     }) 
                 } else {
-                    fs.unlink(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, async function(erryt) {
+                    fs.unlink(__dirname + `/root/asena2/pmaction/${id}.json`, async function(erryt) {
                         if (erryt) {} else {
-                            fs.writeFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, JSON.stringify({
+                            fs.writeFile(__dirname + `/root/asena2/pmaction/${id}.json`, JSON.stringify({
                                 status: "found",
                                 number: id,
                                 times: 1,
@@ -105,10 +105,10 @@ async function nopermitacton(id) {
         var updatewrite = await MongoClient.connect(config.mongodb_url, { useNewUrlParser: true, useUnifiedTopology: true })
 
         await updatewrite.db("pmpermit").collection("data").updateOne({ number: id }, { $set: { times: 1, permit: false } })
-        fs.readFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, { encoding: 'utf8' },
+        fs.readFile(__dirname + `/root/asena2/pmaction/${id}.json`, { encoding: 'utf8' },
             async function(err, data) {
                 if (err) {} else {
-                    fs.unlink(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, async function(erryt) {
+                    fs.unlink(__dirname + `/root/asena2/pmaction/${id}.json`, async function(erryt) {
                         if (erryt) {} else {}
                     })
                 }
@@ -125,7 +125,7 @@ async function handler(id) {
 
     async function checkfile(id) {
         try {
-            return JSON.parse(await fs.readFileSync(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, { encoding: 'utf8' }))
+            return JSON.parse(await fs.readFileSync(__dirname + `/root/asena2/pmaction/${id}.json`, { encoding: 'utf8' }))
         } catch (error) {
             return await readdb(id)
         }
@@ -165,10 +165,10 @@ async function handler(id) {
             }
         }
     } else if (read.status == "found" && read.permit == true) {
-        fs.readFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, { encoding: 'utf8' },
+        fs.readFile(__dirname + `/root/asena2/pmaction/${id}.json`, { encoding: 'utf8' },
             async function(err, data) {
                 if (err) {
-                    fs.writeFile(__dirname + `/root/WhatsAsenaDuplicated/pmaction/${id}.json`, JSON.stringify({
+                    fs.writeFile(__dirname + `/root/asena2/pmaction/${id}.json`, JSON.stringify({
                         status: "found",
                         number: id,
                         times: 1,
