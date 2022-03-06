@@ -1,1 +1,0 @@
-#pm permit kayıt bölümü
