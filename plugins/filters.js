@@ -58,7 +58,7 @@ await message.client.sendMessage(message.jid, fs.readFileSync('./ses kayıtları
 await message.client.sendMessage(message.jid, fs.readFileSync('ses kayıtları/test.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
         }
         
-const array = ['Allah allah','Bak sen','Ne diyo','Vay canına','Öyle mi','Seni sürekli','Tek kankam','Hanım hanım','Bav çiki','404','Adam ya adam','Adam öldü','Amogus','Arkadaşlar ben gidiyorum','Bakıyorsun öyle','Bane','Bağırma lan','Bruh','Ehe','Gökte ne var','Kurumuş boğazım','Kırmızı şortlu','Neyi başaramadın','Sağda tükür','Seni hiç alakadar etmez','Sikmeseler bari','Supra','Şeyin dostum']
+const array = ['Allah allah','Bak sen','Ne diyo','Vay canına','Öyle mi','Seni sürekli','Tek kankam','Hanım hanım','Bav çiki','404','Adam ya adam','Adam öldü','Amogus','Arkadaşlar ben gidiyorum','Bakıyosun öyle','Bane','Bağırma lan','Bruh','Ehe','Gökte ne var','Kurumuş boğazım','Kırmızı şortlu','Neyi başaramadın','Sağda tükür','Seni hiç alakadar etmez','Sikmeseler bari','Supra','Şeymi dostum']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
