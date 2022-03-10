@@ -10,7 +10,7 @@ const TRvefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
 
 Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: TRvefdesc}, (async (message, match) => {  
 
-    if (match[1] === "") return await message.reply(message.jid, TRvefneed, MessageType.text);
+    if (match[1] === '') return await message.reply(message.jid, TRvefneed, MessageType.text);
 
     if (match[1] === 'arkadaşlar ben gidiyorum' || match[1] === 'Arkadaşlar ben gidiyorum' || match[1] === 'Arkadaşlar ben gidiyorum') {
 
