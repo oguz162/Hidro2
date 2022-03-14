@@ -7,7 +7,7 @@ Asena.addCommand({pattern: 'teklif ?(.*)', fromMe: true}, (async (message, match
     
     if (match[1] === '') return await message.sendMessage('*zahmet olmassa bi isim yaz be*!');
     
-    await message.sendMessage('*şimdi sana güzel bir teklifte bulunacağım hazırmısın güzellik* *' + match[1] + '*');
+    await message.sendMessage('*şimdi sana güzel bir teklifte bulunacağım hazırmısın*. *' + match[1] + '*');
     
     await new Promise(r => setTimeout(r, 2000));
 
