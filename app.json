@@ -22,12 +22,12 @@
             "value": "en"
         },
         "BGM_FILTER": {
-            "description": "sohbet sesleri için 'true' yapın aksi ise false",
+            "description": "sohbet sesleri için true yapın aksi ise false",
             "required": false,
             "value": "true"
         },
         "AUTO_STICKER": {
-            "description": "sohbet stickerları için 'true' yapın aksi için false",
+            "description": "sohbet stickerları için true yapın aksi için false",
             "required": false,
             "value": "true"
         },
