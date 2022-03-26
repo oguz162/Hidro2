@@ -33,7 +33,7 @@ module.exports = {
     MENTION: process.env.TAG_REPLY === undefined ? '905516491871@s.whatsapp.net' : process.env.TAG_REPLY,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
     PLKS: process.env.THERI_LIST === undefined ? false : process.env.THERI_LIST,
-    AFPLK: process.env.BOT_SIFRE === undefined ? false : process.env.BOT_SİFRE,
+    AFPLK: process.env.BOT_SİFRE === undefined ? false : process.env.BOT_SİFRE,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
     BGMFILTER: process.env.BGM_FILTER === undefined ? false : convertToBool(process.env.BGM_FILTER),
     INBO: process.env.INBO_BLOCK === undefined ? 'false' : process.env.INBO_BLOCK,
