@@ -176,10 +176,40 @@ ${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
         var getGMTm = new Date().getMinutes()
         var ansk = 'https://gist.githubusercontent.com/oguz162/8ba954aae241c2a5c56ba2465a812ac2/raw'
          
-        while (getGMTh == 15 && getGMTm == 01) {
+        while (getGMTh == 9 && getGMTm == 01) {
             const {data} = await axios(ansk)
             const { sken, skml } = data
                         
+            var announce = ''
+            if (config.LANG == 'EN') announce = sken
+            if (config.LANG == 'ML') announce = skml
+            
+            return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
+        }
+		while (getGMTh == 13 && getGMTm == 01) {
+            const {data} = await axios(ansk)
+            const { sken, skml } = data
+                        
+            var announce = ''
+            if (config.LANG == 'EN') announce = sken
+            if (config.LANG == 'ML') announce = skml
+            
+            return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
+        }
+		while (getGMTh == 17 && getGMTm == 01) {
+            const {data} = await axios(ansk)
+            const { sken, skml } = data
+                  
+            var announce = ''
+            if (config.LANG == 'EN') announce = sken
+            if (config.LANG == 'ML') announce = skml
+            
+            return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
+        } 
+		while (getGMTh == 23 && getGMTm == 01) {
+            const {data} = await axios(ansk)
+            const { sken, skml } = data
+                      
             var announce = ''
             if (config.LANG == 'EN') announce = sken
             if (config.LANG == 'ML') announce = skml
