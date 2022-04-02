@@ -52,10 +52,10 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '905516491871@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./ses kayıtları/test.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('./ses kayıtları/Adam öldü.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
         }
         if (!!message.mention && message.mention[0] == Config.MENTION) {
-await message.client.sendMessage(message.jid, fs.readFileSync('ses kayıtları/test.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
+await message.client.sendMessage(message.jid, fs.readFileSync('ses kayıtları/Adam öldü.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio,duration: Config.SAID, quoted : message.data, ptt: true})
         }
         
 const array = ['Allah allah','Bak sen','Ne diyo','Vay canına','Öyle mi','Seni sürekli','Tek kankam','Hanım hanım','Bav çiki','404','Adam ya adam','Adam öldü','Amogus','Arkadaşlar ben gidiyorum','Bakıyosun öyle','Bane','Bağırma lan','Bruh','Ehe','Gökte ne var','Kurumuş boğazım','Kırmızı şortlu','Neyi başaramadın','Sağda tükür','Seni hiç alakadar etmez','Sikmeseler bari','Supra','Şeymi dostum']
@@ -117,13 +117,13 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     let banned = jid.find( Jid => Jid === message.jid);
     if(banned !== undefined) return
     if (!!message.mention && message.mention[0] == '905516491871@s.whatsapp.net') {
-await message.client.sendMessage(message.jid, fs.readFileSync('./etiket stickerı/test.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
+await message.client.sendMessage(message.jid, fs.readFileSync('./stickerlar/test.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
     }
 const array = ['tetikleyici','tetikleyici2']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-   await message.client.sendMessage(message.jid, fs.readFileSync('./etiket stickerı klasörü/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted: message.data, ptt: false})
+   await message.client.sendMessage(message.jid, fs.readFileSync('./stickerlar/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted: message.data, ptt: false})
 }
 });
 }
