@@ -54,7 +54,7 @@ Asena.addCommand({pattern: 'teklif ?(.*)', fromMe: true}, (async (message, match
         {buttonId: 'id3', buttonText: {displayText: 'neeeeee hayırr'}, type: 1},
         
       ]
-      
+      if (match[1] === '')
       const buttonMessage = {
           contentText: "*benimle bir ömüre varmısın*\n\n╔══╗\n╚╗╔╝\n╔╝(¯`v´¯)\n╚══.¸. *' + match[1] + '*",
           footerText: 'Zlose',
