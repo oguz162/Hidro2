@@ -9,7 +9,7 @@ const Lol = KeyLol[Math.floor(Math.random() * KeyLol.length)]
 
 const DESC_BOB = "Sevimli bir sünger bob gönderisi"
 
-const DESC_RAND = "Yazdığınız metni at koda dönüştürür."
+const DESC_RAND = "Yazdığınız metni qr koda dönüştürür."
 
 const Language = require('../language');
 const Lang = Language.getString('ttp');
