@@ -51,7 +51,7 @@ var dlang_similarity = ''
 var dlang_other = ''
 var dlang_input = ''
 
-if (config.LANG == 'TR') {
+if (config.LANG == 'EN') {
     dlang_dsc = 'Yanıtlanan mesajın dilini tahmin eder.'
     closer_res = 'En Yakın Sonuç:'
     dlang_lang = 'Dil:'
@@ -59,7 +59,7 @@ if (config.LANG == 'TR') {
     dlang_other = 'Diğer Diller'
     dlang_input = 'İşlenen Metin:'
 }
-if (config.LANG == 'EN') {
+if (config.LANG == 'TR') {
     dlang_dsc = 'Guess the language of the replied message.'
     closer_res = 'Closest Result:'
     dlang_lang = 'Language:'
@@ -147,14 +147,14 @@ if (config.WORKTYPE == 'private') {
     var alr_off = ''
     var succ_on = ''
     var succ_off = ''
-    if (config.LANG == 'TR') {
+    if (config.LANG == 'EN') {
         l_dsc = 'Antilink aracını etkinleştirir.'
         alr_on = 'Antilink halihazırda açık!'
         alr_off = 'Antilink halihazırda kapalı!'
         succ_on = 'Antilink Başarıyla Açıldı!'
         succ_off = 'Antilink Başarıyla Kapatıldı!'
     }
-    if (config.LANG == 'EN') {
+    if (config.LANG == 'TR') {
         l_dsc = 'Activates the Antilink tool.'
         alr_on = 'Antilink is already open!'
         alr_off = 'Antilink is currently closed!'
@@ -244,14 +244,14 @@ if (config.WORKTYPE == 'private') {
     var alr_off_bio = ''
     var succ_on_bio = ''
     var succ_off_bio = ''
-    if (config.LANG == 'TR') {
+    if (config.LANG == 'EN') {
         auto_dsc = 'Biyografinize canlı saat ekleyin!'
         alr_on_bio = 'Autobio halihazırda açık!'
         alr_off_bio = 'Autobio halihazırda kapalı!'
         succ_on_bio = 'Autobio Başarıyla Açıldı!'
         succ_off_bio = 'Autobio Başarıyla Kapatıldı!'
     }
-    if (config.LANG == 'EN') {
+    if (config.LANG == 'TR') {
         auto_dsc = 'Add live clock to your bio!'
         alr_on_bio = 'Autobio is already open!'
         alr_off_bio = 'Autobio is currently closed!'
@@ -472,17 +472,6 @@ if (config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
         });
 }));
-    Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
-
-            const vcard = 'BEGIN:VCARD\n'
-            + 'VERSION:3.0\n' 
-            + 'FN:' + Config.OA_NAME + '\n' //created afnanplk, please copy this with credit..
-            + 'ORG:Ajfx;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Config.PHONE + ':' + Config.PHONE + ' \n'
-            + 'END:VCARD'
-await message.client.sendMessage(message.jid, {displayname: "Ajfx", vcard: vcard}, MessageType.contact);
-
-  }));
     
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
@@ -548,7 +537,7 @@ await message.client.sendMessage(message.jid, {displayname: "Ajfx", vcard: vcard
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
-            for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
+            for (var i = 0; i < (result.length < 3 ? result.length : 3); i++) {
                 var get = got(result[i].url, {https: {rejectUnauthorized: false}});
                 var stream = get.buffer();
                 
@@ -557,7 +546,7 @@ await message.client.sendMessage(message.jid, {displayname: "Ajfx", vcard: vcard
                 });
             }
 
-            message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
+            message.reply(Lang.IMG.format((result.length < 3 ? result.length : 3), match[1]));
         });
     }));
 
