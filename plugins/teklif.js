@@ -56,7 +56,7 @@ Asena.addCommand({pattern: 'teklif ?(.*)', fromMe: true}, (async (message, match
       ]
 
       const buttonMessage = {
-          contentText: "*benimle bir ömüre varmısın*\n\n╔══╗\n╚╗╔╝\n╔╝(¯`v´¯)\n╚══.¸. *' + match[1] + '*",
+          contentText: "*benimle bir ömüre varmısın*\n\n╔══╗\n╚╗╔╝\n╔╝(¯`v´¯)\n╚══.¸. *Güzellik*",
           footerText: 'Zlose',
           buttons: buttons,
           headerType: 1
