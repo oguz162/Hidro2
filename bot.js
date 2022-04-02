@@ -166,7 +166,7 @@ ${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        'güncelleme mevcut güncellemek için uptade now yazın' + degisiklikler + '```', MessageType.text
+                        'güncellemek için .güncelle yazın\n\n' + degisiklikler + '```', MessageType.text
                     ); 
                 } 
           }
