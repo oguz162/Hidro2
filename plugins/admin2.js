@@ -916,9 +916,9 @@ Asena.addCommand({pattern: 'invite ?(.*)', fromMe: true, desc: Lang.INVITE_DESC}
 Asena.addCommand({pattern: 'revoke', fromMe: true, desc: "Grubun davet bağlantısını sıfırlar iptal eder"}, (async (message, match) => {    
     if (message.jid.endsWith('@g.us')) {
 	var im = await checkImAdmin(message);
-    if (!im) return await message.client.sendMessage(message.jid, "_Promote bot as an *Admin* to use super commands_", MessageType.text);
+    if (!im) return await message.client.sendMessage(message.jid, "_adamın değilsin dostum_", MessageType.text);
     await message.client.revokeInvite(message.jid)
-    await message.client.sendMessage(message.jid, "_*Group link* reset successfully!_", MessageType.text);
+    await message.client.sendMessage(message.jid, "_Davet bağlantısı sıfırlandı!_", MessageType.text);
 	}}))
 
 module.exports = {
