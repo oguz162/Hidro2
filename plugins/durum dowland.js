@@ -6,10 +6,10 @@ const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 const Config = require('../config');
 
-    Asena.addCommand({pattern: 'durumv$', fromMe: true, desc: 'Download status from wa'}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'durumv$', fromMe: true, desc: 'Video halindeki Whatsapp durumlarını indirir...'}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.client.sendMessage(message.jid,'reply to a status', MessageType.text);
-        var downloading = await message.client.sendMessage(message.jid,'*Downloading Image Status* \n\n ```If it is video status try cmd [.sndv]```',MessageType.text);
+        if (message.reply_message === false) return await message.client.sendMessage(message.jid,'Lütfen indirmek istediğiniz durumu yanıtlayınız!', MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'*Video durum indiriliyor...*',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -22,7 +22,7 @@ const Config = require('../config');
             ffmpeg(location)
                 .save('status.png')
                 .on('end', async () => {
-                    await message.client.sendMessage(message.jid,fs.readFileSync('status.png'), MessageType.image ,{caption: '```WHATSAPP STATUS 🍃```'  , mimetype: Mimetype.jpg, quoted: message.data});
+                    await message.client.sendMessage(message.jid,fs.readFileSync('status.png'), MessageType.image ,{caption: '```Spektral User Bot 🍃```'  , mimetype: Mimetype.jpg, quoted: message.data});
             });
         return 
         }
@@ -30,17 +30,17 @@ const Config = require('../config');
         ffmpeg(location)
             .save('status.mp4')
             .on('end', async () => {
-                await message.client.sendMessage(message.jid,fs.readFileSync('status.mp4'), MessageType.video , {caption: '```WHATSAPP STATUS  🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
+                await message.client.sendMessage(message.jid,fs.readFileSync('status.mp4'), MessageType.video , {caption: '```Spektral User Bot 🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
             });
         return 
     }));
     
     
     
-   Asena.addCommand({pattern: 'durumf$', fromMe: true, desc: 'Download status from wa'}, (async (message, match) => {    
+   Asena.addCommand({pattern: 'durumf$', fromMe: true, desc: 'Foto halindeki Whatsapp durumlarını indirir'}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.client.sendMessage(message.jid,'reply to a status', MessageType.text);
-        var downloading = await message.client.sendMessage(message.jid,'*Downloading Video Status* \n\n ```If it is image try cmd [.sndi]```',MessageType.text);
+        if (message.reply_message === false) return await message.client.sendMessage(message.jid,'Lütfen indirmek istediğiniz Whatsapp durumunu yanıtlayınız!', MessageType.text);
+        var downloading = await message.client.sendMessage(message.jid,'Foto durum indiriliyor...',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -53,7 +53,7 @@ const Config = require('../config');
             ffmpeg(location)    
             .save('output.mp4')
             .on('end', async () => {
-                await message.client.sendMessage(message.jid, fs.readFileSync('output.mp4'), MessageType.video ,{caption: '```WHATSAPP STATUS  🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
+                await message.client.sendMessage(message.jid, fs.readFileSync('output.mp4'), MessageType.video ,{caption: '```Spektral User Bot 🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
             });
         return 
         }
@@ -61,7 +61,7 @@ const Config = require('../config');
         ffmpeg(location)    
             .save('output.mp4')
             .on('end', async () => {
-                await message.client.sendMessage(message.jid, fs.readFileSync('output.mp4'), MessageType.video, {caption: '```WHATSAPP STATUS  🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
+                await message.client.sendMessage(message.jid, fs.readFileSync('output.mp4'), MessageType.video, {caption: '```Spektral User Bot 🍃```'  , mimetype: Mimetype.mp4, quoted: message.data});
             });
         return 
     }));
