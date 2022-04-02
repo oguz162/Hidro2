@@ -913,7 +913,7 @@ Asena.addCommand({pattern: 'invite ?(.*)', fromMe: true, desc: Lang.INVITE_DESC}
     await message.client.sendMessage(message.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }}));
 
-Asena.addCommand({pattern: 'revoke', fromMe: true, desc: "Revokes/resets group's invite link"}, (async (message, match) => {    
+Asena.addCommand({pattern: 'revoke', fromMe: true, desc: "Grubun davet bağlantısını sıfırlar iptal eder"}, (async (message, match) => {    
     if (message.jid.endsWith('@g.us')) {
 	var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, "_Promote bot as an *Admin* to use super commands_", MessageType.text);
