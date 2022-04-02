@@ -403,7 +403,7 @@
             "MUTE_OPEN": "```Grup sohbetinin sesi açıldı!```"
         },
         "unvoice": {
-            "UV_DESC": "Sesi ses kaydına dönüştürür.",
+            "UV_DESC": "şarkıyı yada herhangi bir ses dosyasını ses kaydına dönüştürür.",
             "UV_REPLY": "*Ses Dosyasını Cevaplamalısınız!*",
             "UV_PROC": "```Ses Kaydına Dönüştürülüyor..```"
         },
