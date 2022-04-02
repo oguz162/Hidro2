@@ -245,7 +245,7 @@
             "UPDATER_DESC": "Güncelleme olup olmadığını denetler.",
             "UPDATE": "*Botunuz tamamen güncel*!",
             "NEW_UPDATE": "*yeni güncelleme mevcut*:\n\n```",
-            "UPDATE_NOW_DESC": "*Mevcut güncellemeyi yükler*.",
+            "UPDATE_NOW_DESC": "Mevcut güncellemeyi yükler.",
             "UPDATING": "*Değişiklikler yükleniyor lütfen bekleyiniz ve botunuzu kullanmaya çalışmayınız*...",
             "INVALID_HEROKU": "*❌ Heroku uygulama adınız veya api anahtarınız yanlış!*",
             "UPDATED": "*Güncelleme başarıyla tamamlandı* ✅️",
