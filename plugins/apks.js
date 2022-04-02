@@ -20,7 +20,7 @@ if (Config.WORKTYPE == 'private') {
    }));
 
    Asena.addCommand({pattern: 'cml', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-      await message.sendMessage('💎 *CM LAUNCHER* 💎\npremium unlocked.\n😞 No disponible en este momento.');
+      await message.sendMessage('💎 *CM LAUNCHER* 💎\npremium unlocked.\n😞 Link sıfırlandı maalesef düzenlenecek.');
    }));
 
    Asena.addCommand({pattern: 'apex', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
