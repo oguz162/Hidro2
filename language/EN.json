@@ -534,7 +534,7 @@
             "ARAT": "Aranan Şarkı :"
         },
         "covid": {
-            "COV_DESC":" 15'ten fazla ülkenin günlük ve genel covid tablosunu gösterir.",
+            "COV_DESC" :"15'ten fazla ülkenin günlük ve genel covid tablosunu gösterir.",
             "NOT": "```Üzgünüm Böyle Bir Ülke Bulamadım! Lütfen Geçerli Ülke Kodlarını Girin!``` \n\n ```Ülke Kodları:``` *.covid tr || az || usa || içinde || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
