@@ -4,7 +4,7 @@ const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
 const fs = require('fs');
-const dil = require('axios');
+const axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
