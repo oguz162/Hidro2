@@ -5,7 +5,6 @@ const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
 const os = require('os');
-const hrs = new Date().getHours({ timeZone: 'Europe/Istanbul' })
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
@@ -13,12 +12,6 @@ var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).s
 const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
-var wish = ''
-if (hrs >= 07 && hrs <= 12) wish = '𝑮𝑶𝑶𝑫 𝑴𝑶𝑹𝑵𝑰𝑵𝑮 ⛅'
-if (hrs >= 12 && hrs <= 17) wish = '𝑮𝑶𝑶𝑫 𝑨𝑭𝑻𝑬𝑹𝑵𝑶𝑶𝑵 🌞'
-if (hrs >= 17 && hrs <= 00) wish = '𝑮𝑶𝑶𝑫 𝑬𝑽𝑬𝑵𝑰𝑵𝑮 🌥'
-if (hrs >= 00 && hrs <= 07) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'	
-
 
 Asena.addCommand({pattern: 'liste', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 // buton mesajı gönderirir Zlose
@@ -32,7 +25,7 @@ Asena.addCommand({pattern: 'liste', fromMe: true, dontAddCommandList: true}, (as
       ]
       
       const buttonMessage = {
-          contentText: '𝑯𝑬𝒀 𝑼𝑺𝑬𝑹 🧚‍♂️ \n ' + wish + '\n```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n', 
+          contentText: '```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n', 
           footerText: '✮ Zlose 💕',
           buttons: buttons,
           headerType: 1
