@@ -21,32 +21,6 @@ Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.ALIVE_DESC}, (async (
             { mimetype: Mimetype.mp4, caption: "```WhatsAsena Founder Zlose İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
         )
     }
-    else if (Config.ALIVEMSG == 'SELO') {
-        await message.client.sendMessage(
-            message.jid, 
-            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210228-WA0022.mp4"),
-            MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: "```Zlose efendim sizin İçin Çalışıyorum!```\n\n*Version:* ```2.5.1 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
-        
-        )
-    }
-    else if (Config.ALIVEMSG == 'slo') {
-        await message.client.sendMessage(
-            message.jid, 
-            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/ezgif-7-0bd4f49fd28c.mp4"),
-            MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: "```Bu Kalp Birtek Sana Atıyor 🖤```" }
-        )
-    }
-
-    else if (Config.ALIVEMSG == 'AŞKIM') {
-        await message.client.sendMessage(
-            message.jid, 
-            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210919-WA0048.mp4"),
-            MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "```Melek yüzlü güzel yâr’im.\nEda’sı ile doldu kalbim.\nLâl olmuş konuşmaz dilim.\nEy yâr gel benim ol derim.\nKalbimin nadide gülü sevgili meleğim…```" }
-        )
-    }
     else {
         const payload = Config.ALIVEMSG
         const status = await message.client.getStatus()
