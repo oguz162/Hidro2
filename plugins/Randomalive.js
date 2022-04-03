@@ -7,11 +7,6 @@ const Language = require('../language');
 const Lang = Language.getString('system_stats');
 	
 	Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-
-var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-var plk_here = new Date().toLocaleDateString(get_localized_date)
-var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
 	       
 	       var r_text = new Array ();
 
@@ -34,6 +29,11 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
         r_text[16] ="https://images.pexels.com/photos/370717/pexels-photo-370717.jpeg?cs=srgb&dl=pexels-andre-furtado-370717.jpg&fm=jpg";
         r_text[17] ="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?cs=srgb&dl=pexels-pixabay-2150.jpg&fm=jpg";
         r_text[18] ="https://images.pexels.com/photos/816608/pexels-photo-816608.jpeg?cs=srgb&dl=pexels-alex-andrews-816608.jpg&fm=JGP";
+        
+        var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+        const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        var plk_here = new Date().toLocaleDateString(get_localized_date)
+        var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
         
         var i = Math.floor(19*Math.random())
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
