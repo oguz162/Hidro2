@@ -24,7 +24,7 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
             message.jid, 
             fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "Config.owner" }
+            { mimetype: Mimetype.gif, caption: 'Config.owner' }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
