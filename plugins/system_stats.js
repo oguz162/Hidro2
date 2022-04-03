@@ -5,6 +5,8 @@ const Config = require('../config');
 const chalk = require('chalk');
 const fs = require('fs');
 const axios = require('axios');
+var ggg = Buffer.from(clh.cd, 'base64')
+var ddd = ggg.toString('utf-8')
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
