@@ -22,7 +22,7 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
             message.jid, 
             fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "𝑯𝑬𝒀 𝑼𝑺𝑬𝑹 🧚‍♂️ \n ' + wish + '\n```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```" }
+            { mimetype: Mimetype.gif, caption: "```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```" }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
