@@ -63,7 +63,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, desc: Lang.BAN_DESC}, (asy
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
         }
     }
-}));
+}}));
 
 Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     if (message.jid.endsWith('@g.us')) {
