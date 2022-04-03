@@ -1,4 +1,4 @@
-const LizaMwol = require('../events');
+const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -21,18 +21,18 @@ if (hrs >= 17 && hrs <= 19) wish = '𝑮𝑶𝑶𝑫 𝑬𝑽𝑬𝑵𝑰𝑵�
 if (hrs >= 19 && hrs <= 23) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'
 
 
-let whb = Config.WORKTYPE == 'public' ? false : true
+let whb = Config.WORKTYPE == 'private' ? false : true
 
-LizaMwol.addCommand({pattern: 'alive', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'alive', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
 // send a buttons message!credit Jackz
     const buttons = [
-        {buttonId: 'id1', buttonText: {displayText: Config.ALIVE_BUTTON }, type: 1},
-        {buttonId: 'id2', buttonText: {displayText: Config.ALIVEBUTTON }, type: 1}
+        {buttonId: 'id1', buttonText: {displayText: Config.ALIVEMSG }, type: 1},
+        {buttonId: 'id2', buttonText: {displayText: Config.KAZTRO_SER }, type: 1}
       ]
       
       const buttonMessage = {
-          contentText: ' 𝑯𝑬𝒀 𝑼𝑺𝑬𝑹 🧚‍♂️ \n ' + wish + '\n ⏲️ʙᴏᴛ ᴏɴ sɪɴᴄᴇ : ' + plk_say + '\n 📆ᴅᴀᴛᴇ : ' + plk_here + '\n\n〄 ʙᴏᴛ ɴᴀᴍᴇ : '+Config.BOTV2+'™\n〄 ᴏᴡɴᴇʀ : '+Config.OWNER+'\n〄 ᴡᴏʀᴋᴛʏᴘᴇ : '+Config.WORKTYPE+'\n〄 ʜᴀɴᴅʟᴇʀs : '+Config.HANDLERS+'\n〄 ɴᴜᴍʙᴇʀ : wa.me/'+Config.NU+'\n〄 ʙᴏᴛ ᴠᴇʀsɪᴏɴ : 1.0.0\n〄 ʟᴀɴɢᴜᴀɢᴇ : '+Config.LANG+'\n〄 ᴡᴀ ᴠᴇʀsɪᴏɴ : 14.8.7\n〄 sᴇʀᴠᴇʀ : Baileys\n〄 sᴛᴏʀᴀɢᴇ : 187GB/674678GB \n\n'+Config.ALIVEMSG+'\n',
-          footerText:  '©'+Config.BOTLIZA+' ™',
+          contentText: ' 𝑯𝑬𝒀 𝑼𝑺𝑬𝑹 🧚‍♂️ \n ' + wish + '\n ⏲️ʙᴏᴛ ᴏɴ sɪɴᴄᴇ : ' + plk_say + '\n 📆ᴅᴀᴛᴇ : ' + plk_here + '\n\n〄 ʙᴏᴛ ɴᴀᴍᴇ : '+Config.BOT+'™\n〄 ᴏᴡɴᴇʀ : '+Config.OWNER+'\n〄 ᴡᴏʀᴋᴛʏᴘᴇ : '+Config.WORKTYPE+'\n〄 ʜᴀɴᴅʟᴇʀs : '+Config.HANDLERS+'\n〄 ɴᴜᴍʙᴇʀ : wa.me/'+Config.NU+'\n〄 ʙᴏᴛ ᴠᴇʀsɪᴏɴ : 1.0.0\n〄 ʟᴀɴɢᴜᴀɢᴇ : '+Config.LANG+'\n〄 ᴡᴀ ᴠᴇʀsɪᴏɴ : 14.8.7\n〄 sᴇʀᴠᴇʀ : Baileys\n〄 sᴛᴏʀᴀɢᴇ : 187GB/674678GB \n\n'+Config.ALIVEMSG+'\n',
+          footerText:  '©'+Config.OWNER+' ™',
           buttons: buttons,
           headerType: 1
       }
