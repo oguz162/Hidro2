@@ -1,44 +1,53 @@
 const Asena = require('../events');
-const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+const {MessageType} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
-const fs = require('fs');
-const dil = require('axios');
+const axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
+if (Config.WORKTYPE == 'private') {
+
+    Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+        
+        let pp
+        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
+    }));
+
+    Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
+
+        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
+        await message.sendMessage(
+            '```' + child + '```', MessageType.text
+        );
+    }));
+}
+else if (Config.WORKTYPE == 'public') {
+
+   Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+        
+        let pp
+        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
+    }));
+
+    Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
+
+        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
+        await message.sendMessage(
+            '```' + child + '```', MessageType.text
+        );
+    }));
     
-    if (Config.ALIVEMSG == 'default') {
+    Asena.addCommand({pattern: 'psysd', fromMe: true, desc: Lang.SYSD_DESC, dontAddCommandList: true }, (async (message, match) => {
 
-        await message.client.sendMessage(
-            message.jid, 
-            fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
-            MessageType.video, 
-            { mimetype: Mimetype.mp4, caption: "```WhatsAsena Founder Zlose İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
-        )
-    }
-    else {
-        const payload = Config.ALIVEMSG
-        const status = await message.client.getStatus()
-        const ppUrl = await message.client.getProfilePicture() 
-        const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
-
-        if (!payload.includes('{pp}')) {
-            await message.client.sendMessage(message.jid,payload.replace('{user}', message.client.user.name).replace('{version}', Config.VERSION).replace('{info}', `${status.status}`), MessageType.text);
-        }
-        else if (payload.includes('{pp}')) {
-            await message.sendMessage(Buffer.from(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`) });
-        }
-    }
-}));
-
-Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
-    const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
-    await message.sendMessage(
-        '```' + child + '```', MessageType.text
-    );
-}));
+        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
+        await message.sendMessage(
+            '```' + child + '```', MessageType.text
+        );
+    }));
+}
