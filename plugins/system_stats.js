@@ -24,7 +24,7 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
             message.jid, 
             fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "Config.OWNER" }
+            { mimetype: Mimetype.gif, caption: '+Config.owner+' }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
@@ -50,7 +50,7 @@ var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + 
             message.jid, 
             fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210919-WA0048.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "```Melek yüzlü güzel yâr’im.\nEda’sı ile doldu kalbim.\nLâl olmuş konuşmaz dilim.\nEy yâr gel benim ol derim.\nKalbimin nadide gülü sevgili meleğim…```" }
+            { mimetype: Mimetype.gif, caption: "```Melek yüzlü güzel yâr’im.\nEda’sı ile doldu kalbim.\nLâl ol''muş konuşmaz dilim.\nEy yâr gel benim ol derim.\nKalbimin nadide gülü sevgili meleğim…```" }
         )
     }
     else {
