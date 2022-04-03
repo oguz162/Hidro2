@@ -22,7 +22,7 @@ if (hrs >= 19 && hrs <= 23) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'
 
 
 
-Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.OUZ_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.system_stats}, (async (message, match) => {
 
     
     if (Config.ALIVEMSG == 'default') {
@@ -31,7 +31,7 @@ Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.OUZ_DESC}, (async (me
             message.jid, 
             fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Zlose İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
+            { mimetype: Mimetype.gif, caption: "𝑯𝑬𝒀 𝑼𝑺𝑬𝑹 🧚‍♂️ \n ' + wish + '\n```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```" }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
