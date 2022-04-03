@@ -8,10 +8,7 @@ const os = require('os');
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
 var ddd = ggg.toString('utf-8')
-
-Asena.addCommand({pattern: 'liste', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-// buton mesajı gönderirir Zlose
-    var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
@@ -20,6 +17,10 @@ if (hrs >= 00 && hrs <= 12) wish = '𝑮𝑶𝑶𝑫 𝑴𝑶𝑹𝑵𝑰𝑵�
 if (hrs >= 12 && hrs <= 17) wish = '𝑮𝑶𝑶𝑫 𝑨𝑭𝑻𝑬𝑹𝑵𝑶𝑶𝑵 🌞'
 if (hrs >= 17 && hrs <= 19) wish = '𝑮𝑶𝑶𝑫 𝑬𝑽𝑬𝑵𝑰𝑵𝑮 🌥'
 if (hrs >= 19 && hrs <= 23) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'	
+
+
+Asena.addCommand({pattern: 'liste', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+// buton mesajı gönderirir Zlose
 
         const buttons = [
 
