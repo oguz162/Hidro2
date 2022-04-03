@@ -22,15 +22,26 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, desc: Lang.BAN_DESC}, (asy
 
     if (Config.BANMSG == 'default') {
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(
+                message.jid, 
+                fs.readFileSync("/root/asena2/media/gif/ban.mp4"),
+                MessageType.video, 
+                { mimetype: Mimetype.gif, caption: "Founder Tarafından Banlandın!" }
+            )
+            await message.client.sendMessage(message.jid,'```Haha Loser``` ' +'@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
             message.mention.map(async (user) => {
-                etiketler += '@' + user.split('@')[0] + ',';
+                etiketler += '@' + user.split("@")[0];
             });
-
-            await message.client.sendMessage(message.jid,etiketler + '```, ' + Lang.BANNED + '```', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
+            await message.client.sendMessage(
+                message.jid, 
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/ban.mp4"),
+                MessageType.video, 
+                { mimetype: Mimetype.gif, caption: "SELO Tarafından Banlandın!" }
+            )
+            await message.client.sendMessage(message.jid,'```siktir git ezik``` ' + etiketler + ' 😈', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupRemove(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
@@ -38,21 +49,21 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, desc: Lang.BAN_DESC}, (asy
     }
     else {
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split('@')[0] + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split("@")[0] + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
             message.mention.map(async (user) => {
-                etiketler += '@' + user.split('@')[0] + ',';
+                etiketler += '@' + user.split("@")[0] + ',';
             });
-
+            
             await message.client.sendMessage(message.jid,etiketler + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupRemove(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
         }
     }
-	}}));
+}));
 
 Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     if (message.jid.endsWith('@g.us')) {
