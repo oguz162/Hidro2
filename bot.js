@@ -150,7 +150,7 @@ ${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
         });
 
         console.log(
-            chalk.green.bold('Zlose ' + config.WORKTYPE + ' Spektral 💙'));
+            chalk.green.bold('Spektral ' + config.WORKTYPE + ' Olarak Çalışıyor 💙'));
           // thanks to afnanplk
 	    if (config.LANG == 'EN' || config.LANG == 'ML') {
                 await git.fetch();
