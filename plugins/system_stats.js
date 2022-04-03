@@ -9,7 +9,7 @@ const dil = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.system_stats}, (async (message, match) => {
+Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
     
     if (Config.ALIVEMSG == 'default') {
