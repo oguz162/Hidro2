@@ -9,13 +9,12 @@ const dil = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
+Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.system_stats}, (async (message, match) => {
+
 var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
 const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
-
-Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.system_stats}, (async (message, match) => {
-
     
     if (Config.ALIVEMSG == 'default') {
 
