@@ -5,7 +5,6 @@ const Config = require('../config');
 const chalk = require('chalk');
 const fs = require('fs');
 const dil = require('axios');
-const hrs = new Date().getHours({ timeZone: 'Europe/Istanbul' })
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
@@ -14,13 +13,6 @@ var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).s
 const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
-var wish = ''
-if (hrs >= 00 && hrs <= 12) wish = '𝑮𝑶𝑶𝑫 𝑴𝑶𝑹𝑵𝑰𝑵𝑮 ⛅'
-if (hrs >= 12 && hrs <= 17) wish = '𝑮𝑶𝑶𝑫 𝑨𝑭𝑻𝑬𝑹𝑵𝑶𝑶𝑵 🌞'
-if (hrs >= 17 && hrs <= 19) wish = '𝑮𝑶𝑶𝑫 𝑬𝑽𝑬𝑵𝑰𝑵𝑮 🌥'
-if (hrs >= 19 && hrs <= 23) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'	
-
-
 
 Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.system_stats}, (async (message, match) => {
 
