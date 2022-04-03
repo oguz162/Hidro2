@@ -18,7 +18,7 @@ Asena.addCommand({pattern: 'ouz', fromMe: true, desc: Lang.ALIVE_DESC}, (async (
             message.jid, 
             fs.readFileSync("/root/asena2/media/gif/_thefunmarvel on Instagram_ _Var mı daha haşmetlisi ------__CUK2rmEgSSb(MP4).mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Zlose İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
+            { mimetype: Mimetype.mp4, caption: "```WhatsAsena Founder Zlose İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
