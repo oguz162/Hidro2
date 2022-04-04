@@ -43,7 +43,7 @@ const Lang = Language.getString('system_stats');
 
         var i = Math.floor(19*Math.random())
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '' + wish + '\n*'+Config.ALIVEMSG+'*\n*Senin için tam potansiyel çalışıyorum*\n\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```ℕ𝕌𝕄𝔸ℝ𝔸:``` '+Config.NUMBER+\n```𝕍𝔼ℝ𝕊İ𝕆ℕ:``` '+Config.VERSİON+'\n```𝕎𝕆ℝ𝕂𝕋𝕐ℙ𝔼:``` *'+Config.WORKTYPE+'*\n```ℍ𝔸ℕ𝔻𝕃𝔼ℝ𝕊:``` '+Config.HANDLERS+'\n⏱ 𝔖𝔞𝔞𝔱: ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥: ```' + plk_here + '```' }
+        await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '' + wish + '\n*'+Config.ALIVEMSG+'*\n*Senin için tam potansiyel çalışıyorum*\n\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```ℕ𝕌𝕄𝔸ℝ𝔸:``` '+Config.NUMBER+'\n```𝕍𝔼ℝ𝕊İ𝕆ℕ:``` '+Config.VERSİON+'\n```𝕎𝕆ℝ𝕂𝕋𝕐ℙ𝔼:``` *'+Config.WORKTYPE+'*\n```ℍ𝔸ℕ𝔻𝕃𝔼ℝ𝕊:``` '+Config.HANDLERS+'\n⏱ 𝔖𝔞𝔞𝔱: ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥: ```' + plk_here + '```' }
         )
   
 }));
