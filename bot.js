@@ -187,7 +187,7 @@ ${chalk.blue.italic('ℹ️ WhatsAppa bağlanılıyor...')}`);
         console.log(
             chalk.green.bold('Spektral ' + config.WORKTYPE + ' Olarak Çalışıyor 💙'));
           // thanks to afnanplk
-	    if (config.LANG == 'EN' || config.LANG == 'ML') {
+	    if (config.LANG == 'TR' || config.LANG == 'ML') {
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                 if (commits.total === 0) {
