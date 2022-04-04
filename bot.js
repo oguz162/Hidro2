@@ -86,7 +86,7 @@ async function whatsAsena () {
             const { sken, skml } = data
                         
             var announce = ''
-            if (config.LANG == 'EN') announce = sken
+            if (config.LANG == 'TR') announce = sken
             if (config.LANG == 'ML') announce = skml
             
             return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
@@ -102,7 +102,7 @@ async function whatsAsena () {
             let min = getGMTm < 10 ? '0' + getGMTm : getGMTm
             const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             var utch = new Date().toLocaleDateString(config.lANG, get_localized_date)
-            const biography = '📅 ' + utch + '\n⌚ ' + hour + ':' + min + ':' + getGMTs + '\n\n🌑 spektral'
+            const biography = '📅 ' + utch + '\n'⏱ ' + hour + ':' + min + ':' + getGMTs + '\n\n🌑 spektral'
             await conn.setStatus(biography)
         }
     }, 12368);
