@@ -219,7 +219,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ANTİ_LİNK']: 'true'
+                        ['ALL_LINK_BAN']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
@@ -232,7 +232,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ANTİ_LİNK']: 'false'
+                        ['ALL_LINK_BAN']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
