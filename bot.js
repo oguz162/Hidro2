@@ -11,6 +11,7 @@ const { DataTypes } = require('sequelize');
 const { getMessage } = require("./plugins/sql/greetings");
 const git = simpleGit();
 const axios = require('axios');
+const Heroku = require('heroku-client');
 const got = require('got');
 
 const Language = require('./language');
