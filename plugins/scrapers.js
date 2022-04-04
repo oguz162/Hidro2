@@ -51,7 +51,7 @@ var dlang_similarity = ''
 var dlang_other = ''
 var dlang_input = ''
 
-if (config.LANG == 'EN') {
+if (config.LANG == 'TR') {
     dlang_dsc = 'Yanıtlanan mesajın dilini tahmin eder.'
     closer_res = 'En Yakın Sonuç:'
     dlang_lang = 'Dil:'
@@ -59,7 +59,7 @@ if (config.LANG == 'EN') {
     dlang_other = 'Diğer Diller'
     dlang_input = 'İşlenen Metin:'
 }
-if (config.LANG == 'TR') {
+if (config.LANG == 'EN') {
     dlang_dsc = 'Guess the language of the replied message.'
     closer_res = 'Closest Result:'
     dlang_lang = 'Language:'
@@ -147,14 +147,14 @@ if (config.WORKTYPE == 'private') {
     var alr_off = ''
     var succ_on = ''
     var succ_off = ''
-    if (config.LANG == 'EN') {
+    if (config.LANG == 'TR') {
         l_dsc = 'Antilink aracını etkinleştirir.'
         alr_on = 'Antilink halihazırda açık!'
         alr_off = 'Antilink halihazırda kapalı!'
         succ_on = 'Antilink Başarıyla Açıldı!'
         succ_off = 'Antilink Başarıyla Kapatıldı!'
     }
-    if (config.LANG == 'TR') {
+    if (config.LANG == 'EN') {
         l_dsc = 'Activates the Antilink tool.'
         alr_on = 'Antilink is already open!'
         alr_off = 'Antilink is currently closed!'
@@ -244,14 +244,14 @@ if (config.WORKTYPE == 'private') {
     var alr_off_bio = ''
     var succ_on_bio = ''
     var succ_off_bio = ''
-    if (config.LANG == 'EN') {
+    if (config.LANG == 'TR') {
         auto_dsc = 'Biyografinize canlı saat ekleyin!'
         alr_on_bio = 'Autobio halihazırda açık!'
         alr_off_bio = 'Autobio halihazırda kapalı!'
         succ_on_bio = 'Autobio Başarıyla Açıldı!'
         succ_off_bio = 'Autobio Başarıyla Kapatıldı!'
     }
-    if (config.LANG == 'TR') {
+    if (config.LANG == 'EN') {
         auto_dsc = 'Add live clock to your bio!'
         alr_on_bio = 'Autobio is already open!'
         alr_off_bio = 'Autobio is currently closed!'
