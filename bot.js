@@ -13,6 +13,9 @@ const git = simpleGit();
 const axios = require('axios');
 const Heroku = require('heroku-client');
 const got = require('got');
+const heroku = new Heroku({
+    token: config.HEROKU.API_KEY
+});
 
 const Language = require('./language');
 const Lang = Language.getString('updater');
