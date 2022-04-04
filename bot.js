@@ -76,37 +76,41 @@ async function whatsAsena () {
     var OWN = { ff: '905516491871,0' }
     const Session = new StringSession();
      //günlük duyurular ve oto bio
-    setInterval(async () => { 
+
+ setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
-        var ansk = 'https://gist.githubusercontent.com/oguz162/8ba954aae241c2a5c56ba2465a812ac2/raw'
-         
-        while (getGMTh == 15 && getGMTm == 01) {
-            const {data} = await axios(ansk)
-            const { sken, skml } = data
-                        
-            var announce = ''
-            if (config.LANG == 'TR') announce = sken
-            if (config.LANG == 'ML') announce = skml
-            
-            return await conn.sendMessage(conn.user.jid, '*[ GÜNLÜK DENEME ]*\n\n' + announce, MessageType.text);
-        }
-
+        await axios.get('https://gist.githubusercontent.com/phaticusthiccy/d0d1855bd0098d773759b4f3345bd292/raw/').then(async (ann) => {
+            const { infotr, infoen, infoes, infopt, infoid, infoaz, infohi, infoml, inforu} = ann.data.announcements          
+            if (infotr !== '' && config.LANG == 'TR') {
+                while (getGMTh == 03 && getGMTm == 1) { 
+                    return conn.sendMessage(conn.user.jid, '[ ```Günlük Duyurular``` ]\n\n' + infotr.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
+                }
+            }
+        })
     }, 50000);
+    async function asynchronous_ch() {
+        console.log('Test')
+    }
+    asynchronous_ch()
+    var biography_var = ''
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        biography_var = vars.AUTO_BİO
+    });
     setInterval(async () => { 
-        if (config.AUTOBİO) {
-            var getGMTh = new Date().getHours()
-            var getGMTm = new Date().getMinutes()
-            var getGMTs = new Date().getSeconds()
-            let hour = getGMTh < 1 ? '0' + getGMTh : getGMTh
-            let min = getGMTm < 10 ? '0' + getGMTm : getGMTm
-            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var utch = new Date().toLocaleDateString(config.lANG, get_localized_date)
-            const biography = '📅 ' + utch + '\n⏱ ' + hour + ':' + min + ':' + getGMTs + '\n\n🌑 spektral'
-            await conn.setStatus(biography)
+        if (biography_var == 'true') {
+            if (conn.user.jid.startsWith('90')) { // Turkey
+                var ov_time = new Date().toLocaleString('TR', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+                var biography = 'Change Your Mind \n\n📅 ' + utch + '\n⌚ ' + ov_time 
+                await conn.setStatus(biography)
+            }
         }
-    }, 12368);
+    }, 7890);
+
      //Son oto bio ve günlük duyurular
+
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb; 
 
