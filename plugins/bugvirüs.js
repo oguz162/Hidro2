@@ -9,22 +9,19 @@ const Lang = Language.getString('admin');
 const mut = Language.getString('mute');
 
 async function checkImAdmin(message, user = message.client.user.jid) {
-
     var grup = await message.client.groupMetadata(message.jid);
-
     var sonuc = grup['participants'].map((member) => {
-
         
-
         if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
-
     });
-
     return sonuc.includes(true);
-
 }
 
 Asena.addCommand({pattern: 'bug ?(.*)', fromMe: true, desc: DDO, deleteCommand: true}, (async (message, match) => {    
+
+        if (message.jid.endsWith('@g.us')) {
+    var im = await checkImAdmin(message);
+    if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
         if (match[1] == '') {
 
