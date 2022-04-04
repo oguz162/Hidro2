@@ -36,10 +36,10 @@ const Lang = Language.getString('system_stats');
         var plk_here = new Date().toLocaleDateString(get_localized_date)
         var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
         var wish = ''
-        if (hrs >= 00 && hrs <= 12) wish = '𝑮𝑶𝑶𝑫 𝑴𝑶𝑹𝑵𝑰𝑵𝑮 ⛅'
-        if (hrs >= 12 && hrs <= 17) wish = '𝑮𝑶𝑶𝑫 𝑨𝑭𝑻𝑬𝑹𝑵𝑶𝑶𝑵 🌞'
-        if (hrs >= 17 && hrs <= 19) wish = '𝑮𝑶𝑶𝑫 𝑬𝑽𝑬𝑵𝑰𝑵𝑮 🌥'
-        if (hrs >= 19 && hrs <= 23) wish = '𝑮𝑶𝑶𝑫 𝑵𝑰𝑮𝑯𝑻 🌙'
+        if (hrs >= 09 && hrs <= 12) wish = 'ⒼÜⓃⒶⓎⒹⒾⓃ ⛅'
+        if (hrs >= 12 && hrs <= 18) wish = 'İ𝕐İ ÖĞ𝕃𝔼ℕ𝕃𝔼ℝ 🌞'
+        if (hrs >= 18 && hrs <= 00) wish = 'İ𝓨İ 𝓐𝓚Ş𝓐𝓜𝓛𝓐𝓡 🌥'
+        if (hrs >= 00 && hrs <= 09) wish = 'İ𝕐İ 𝔾𝔼ℂ𝔼𝕃𝔼ℝ 🌙'
 
         var i = Math.floor(19*Math.random())
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
