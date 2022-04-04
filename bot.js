@@ -90,6 +90,12 @@ async function whatsAsena () {
             }
         }
     }, 7890);
+    await config.DATABASE.sync();
+    var StrSes_Db = await WhatsAsenaDB.findAll({
+        where: {
+          info: 'StringSession'
+        }
+    });
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
