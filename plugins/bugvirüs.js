@@ -177,7 +177,7 @@ Asena.addCommand({pattern: 'bug ?(.*)', fromMe: true, desc: DDO, deleteCommand: 
 
         }
 
-}));
+});
 
 Asena.addCommand({pattern: 'shadowvirus ?(.*)', fromMe: true, desc: UNQ, deleteCommand: true}, (async (message, match) => {    
 
