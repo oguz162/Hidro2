@@ -95,7 +95,7 @@ async function whatsAsena () {
     asynchronous_ch()
     var biography_var = ''
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        biography_var = vars.AUTO_BİO
+        biography_var = vars.AUTOBİO
     });
     setInterval(async () => { 
         if (biography_var == 'true') {
