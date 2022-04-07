@@ -1,4 +1,4 @@
-const Asena = require('../events');
+/*const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -33,3 +33,4 @@ Asena.addCommand({pattern: 'buton', fromMe: true, dontAddCommandList: true}, (as
        await message.client.sendMessage(message.jid, button, MessageType.buttonMessage)
     
     }));
+/*
