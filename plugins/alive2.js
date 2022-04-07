@@ -33,4 +33,4 @@ Asena.addCommand({pattern: 'buton', fromMe: true, dontAddCommandList: true}, (as
        await message.client.sendMessage(message.jid, button, MessageType.buttonMessage)
     
     }));
-/*
+*/
