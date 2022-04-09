@@ -1,6 +1,6 @@
 {
   "name": "Zlose",
-  "version": "9.7.6",
+  "version": "^10.0.0",
   "description": "silivri soğuktur.",
   "main": "./asena2/bot.js",
   "scripts": {
