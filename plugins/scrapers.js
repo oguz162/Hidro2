@@ -211,7 +211,7 @@ if (config.WORKTYPE == 'private') {
         succ_off = 'Antilink Berhasil Ditutup!'
     }
     Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
-        const anti_status = `${config.ANTİLİNK}`
+        const anti_status = `${config.ALL_LINK_BAN}`
         if (match[1] == 'on') {
             if (anti_status == 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_on + '*', MessageType.text)
@@ -316,7 +316,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_BİO']: 'true'
+                        ['AUTOBİO']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
@@ -329,7 +329,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTO_BİO']: 'false'
+                        ['AUTOBİO']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
