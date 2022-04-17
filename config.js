@@ -14,7 +14,7 @@ module.exports = {
     VERSION: '^10.0.0',
     CHANNEL: 'https://t.me/remasterplugin',
     SESSION: process.env.AMRUSER_CODE === undefined ? '' : process.env.AMRUSER_CODE,
-    ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
+    ALL_LINK_BAN: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
     FAKE: process.env.FAKE_REMOVE === undefined ? 'false' : process.env.FAKE_REMOVE,
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
