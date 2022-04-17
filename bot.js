@@ -102,7 +102,7 @@ async function whatsAsena () {
             let hour = getGMTh < 1 ? '0' + getGMTh : getGMTh
             let min = getGMTm < 10 ? '0' + getGMTm : getGMTm
             const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var utch = new Date().toLocaleDateString(config.lANG, get_localized_date)
+            var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
             const biography = '📅 ' + utch + '\n⏱ ' + hour + ':' + min + ':' + getGMTs + '\n\n🌑 spektral'
             await conn.setStatus(biography)
         }
