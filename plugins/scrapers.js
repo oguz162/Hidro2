@@ -219,7 +219,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ALL_LINK_BAN']: 'true'
+                        ['ANTİ_LİNK']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
@@ -232,7 +232,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['ALL_LINK_BAN']: 'false'
+                        ['ANTİ_LİNK']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
@@ -316,7 +316,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTOBİO']: 'true'
+                        ['AUTO_BİO']: 'true'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
@@ -329,7 +329,7 @@ if (config.WORKTYPE == 'private') {
             else {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
-                        ['AUTOBİO']: 'false'
+                        ['AUTO_BİO']: 'false'
                     } 
                 });
                 await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
