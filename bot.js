@@ -95,7 +95,7 @@ async function whatsAsena () {
 
     }, 50000);
     setInterval(async () => { 
-        if (config.AUTO_BİO) {
+        if (config.AUTOBİO) {
             var getGMTh = new Date().getHours()
             var getGMTm = new Date().getMinutes()
             var getGMTs = new Date().getSeconds()
