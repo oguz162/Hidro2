@@ -31,7 +31,7 @@ Asena.addCommand({pattern: 'button',fromMe: true}, (async (message, match) => {
 
     const button = {
         buttonText: 'Buraya Tıkla', 
-        description: "```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n",
+        description: '```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n',
         sections: sections,
         listType: 1
 
