@@ -11,6 +11,11 @@ var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).s
 const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 var plk_here = new Date().toLocaleDateString(get_localized_date)
 var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
+var wish = ''
+        if (hrs >= 06 && hrs <= 12) wish = 'ⒼÜⓃⒶⓎⒹⒾⓃ ⛅'
+        if (hrs >= 12 && hrs <= 18) wish = 'İ𝕐İ ÖĞ𝕃𝔼ℕ𝕃𝔼ℝ 🌞'
+        if (hrs >= 18 && hrs <= 00) wish = 'İ𝓨İ 𝓐𝓚Ş𝓐𝓜𝓛𝓐𝓡 🌥'
+        if (hrs >= 00 && hrs <= 06) wish = 'İ𝕐İ 𝔾𝔼ℂ𝔼𝕃𝔼ℝ 🌙'
 
 Asena.addCommand({pattern: 'button',fromMe: true}, (async (message, match) => {
 
@@ -31,7 +36,7 @@ Asena.addCommand({pattern: 'button',fromMe: true}, (async (message, match) => {
 
     const button = {
         buttonText: 'Buraya Tıkla', 
-        description: '```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n',
+        description: '```𝔅𝔬𝔱 İ𝔰𝔪𝔦:``` *'+Config.BOT+'*\n```𝔅𝔬𝔱 𝔖𝔞𝔥𝔦𝔟𝔦:``` *'+Config.OWNER+'*\n\n' + wish + '\n⏱ 𝔖𝔞𝔞𝔱   : ```' + plk_say + '```\n📅 𝔗𝔞𝔯𝔦𝔥 : ```' + plk_here + '```\n\n☃️ İstediğiniz komut listesini açmak için aşağıdaki butonları kullanın lütfen :)\n✮ Zlose 💕',
         sections: sections,
         listType: 1
 
