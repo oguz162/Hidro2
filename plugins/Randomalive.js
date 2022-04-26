@@ -31,7 +31,7 @@ const Lang = Language.getString('system_stats');
         r_text[17] ="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?cs=srgb&dl=pexels-pixabay-2150.jpg&fm=jpg";
         r_text[18] ="https://images.pexels.com/photos/816608/pexels-photo-816608.jpeg?cs=srgb&dl=pexels-alex-andrews-816608.jpg&fm=JGP";
         
-        var plk_say = new Date().toLocaleString('tr', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+        var plk_say = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
         var afnplk = '```⏱ Saat :' + plk_say + '```\n\n ```📅 Tarih :' + plk_here + '```'
