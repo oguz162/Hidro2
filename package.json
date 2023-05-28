@@ -27,7 +27,7 @@
   "dependencies": {
     "@adiwajshing/baileys": "4.4.0",
     "@lh2020/speedtest-net": "^2.1.1",
-    "browser-id3-writer": "^4.4.0",
+    "browser-id3-writer": "^5.0.0",
     "playstore-scraper": "^1.0.0",
     "axios": "^0.21.1",
     "googlethis": "^1.0.7",
